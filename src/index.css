@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+
+@import "tailwindcss";
+
+body{
+    font-family: sans-serif;
+}
+
+@layer base {
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(17, 17, 17, 0.4);
+    border-radius: 8px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.6);
+  }
+}
+
+
+@layer utilities {
+  .searchScrollBar::-webkit-scrollbar {
+    width: 2px; 
+    height: 4px; 
+  }
+
+  .searchScrollBar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .searchScrollBar::-webkit-scrollbar-thumb {
+    background-color: rgba(206, 197, 197, 0.4); 
+    border-radius: 8px;
+  }
+
+  .searchScrollBar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.6);
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {      
+  font-size: 25px !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+@keyframes popScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-animate {
+  animation: popScale 0.5s ease-in-out;
+}
